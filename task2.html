@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Task 2</title>
+  </head>
+  <body>
+    <a href="index.html">Back</a>
+    <div class="task-article">
+      <h2 class="task-article__title">Task 2</h2>
+
+      <div class="task-article__block">
+        <h5 class="task-article__sub-title">
+          Дано рік народження (дата: 1 січня) та поточний рік. Знайти кількість
+          років.
+        </h5>
+        <script>
+          alert("Task 2")
+          const YEAR_NOW = 2024
+          const yourYear = parseInt(prompt("Enter your year:", "2024"))
+          const yearResult = YEAR_NOW - yourYear
+          document.write(
+            `So, the result (year now is ${YEAR_NOW} and your year - ${yourYear}) is: ${yearResult} `
+          )
+          alert(
+            `So, the result (year now is ${YEAR_NOW} and your year - ${yourYear}) is: ${yearResult} `
+          )
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

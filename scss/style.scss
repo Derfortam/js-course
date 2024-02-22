@@ -1,0 +1,99 @@
+@use "sass:math";
+@import "_reset.scss";
+@import "_fonts.scss";
+@import "_functions.scss";
+
+.wrapper {
+  overflow: clip;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.wrapper main {
+  flex-grow: 1;
+}
+//* container can changes
+[class*="__container"] {
+  max-width: toRem(1259);
+  margin: 0 auto;
+  padding: 0 toRem(15);
+}
+body {
+  padding: toRem(30) toRem(300);
+  // color: #ffd000;
+  background-color: #333;
+  // font-size: toRem(18);
+  color: #fff;
+}
+@import "_task0.scss";
+@import "_task1.scss";
+// div {
+//   background-color: #000;
+//   padding: toRem(20);
+//   margin-bottom: toRem(20);
+// }
+
+// h2 {
+//   font-size: toRem(25);
+//   font-weight: 600;
+//   margin-bottom: toRem(10);
+//   color: #ffd000;
+// }
+
+// h3 {
+//   font-size: toRem(18);
+//   font-weight: 500;
+//   margin-bottom: toRem(10);
+//   margin-top: toRem(5);
+//   letter-spacing: toRem(2);
+// }
+// span {
+//   display: block;
+//   color: #ffd000;
+//   font-size: toRem(16);
+//   font-weight: 400;
+//   margin-bottom: toRem(10);
+// }
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: toRem(15);
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(10);
+    align-items: flex-start;
+    a {
+      font-size: toRem(25);
+      font-weight: 600;
+      color: #ffd000;
+      transition: color 0.3s;
+      display: flex;
+      align-items: center;
+      gap: toRem(10);
+      &::before {
+        content: "";
+        width: toRem(15);
+        height: toRem(15);
+        background-color: #ff8394;
+        border-radius: 50%;
+      }
+      @media (any-hover: hover) {
+        &:hover {
+          color: #ad8e00;
+        }
+      }
+    }
+    padding-bottom: toRem(5);
+    border-bottom: toRem(1) solid #fff;
+  }
+
+  &__text {
+    p {
+      line-height: 1.3;
+      font-size: toRem(20);
+    }
+  }
+}
