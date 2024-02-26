@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- zxx -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Name</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <main class="page">
+      <div class="page__task">
+        <div class="task__container">
+
+          <script>
+            // Here i can use if/else or switch. But I chosen Switch
+            const personAge = parseInt(prompt("Enter person age", "1"))
+
+            switch (true) {
+              case personAge <= 5:
+                document.write("This is the child")
+                break
+              case personAge <= 17:
+                document.write("This is the tennager")
+                break
+              case personAge <= 23:
+                document.write("This is the student")
+                break
+              case personAge <= 60:
+                document.write("This is the adult")
+                break
+              case personAge > 60:
+                document.write("This is the pensioner")
+            }
+          </script>
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- zxx -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Name</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <main class="page">
+      <div class="page__task">
+        <div class="task__container">
+
+          <script>
+            const randomNumber = Math.floor(Math.random() * 5) + 1
+
+            let yourNumber = parseInt(prompt("Enter your number (Integer):", "1"))
+
+            if (yourNumber === randomNumber) {
+              document.write("Yes, you guessed it, I'm proud of you")
+            } else {
+              alert("You didn't get in. Don't worry, you have one atempt yet")
+              yourNumber = parseInt(prompt("Enter your number (Integer):", "1"))
+              if (yourNumber === randomNumber) {
+                document.write("Yes, you guessed it, I'm proud of you")
+              }
+              else {
+                document.write(`It's a shame you didn't get in. Try again next time. The correct number: ${randomNumber}`)
+              }
+            }
+          </script>
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+
+</html>
