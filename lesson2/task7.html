@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- zxx -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Name</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <main class="page">
+      <div class="page__task">
+        <div class="task__container">
+
+          <script>
+            let numberOfMonth = parseInt(prompt("Enter a month number (1-12):", "1"))
+
+            switch (numberOfMonth) {
+              case 12:
+              case 1:
+              case 2:
+                document.write("It is winter")
+                break
+              case 3:
+              case 4:
+              case 5:
+                document.write("It is spring")
+                break
+              case 6:
+              case 7:
+              case 8:
+                document.write("It is summer")
+                break
+              case 9:
+              case 10:
+              case 11:
+                document.write("It is fall")
+                break
+              default:
+                document.write("You input incorrect data")
+
+            }
+          </script>
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+
+</html>
