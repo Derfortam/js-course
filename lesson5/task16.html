@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- zxx -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Name</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+
+    <main class="page">
+      <div class="page__task">
+        <div class="task__container">
+          <a href="index.html" class="task__back">Back to Main</a>
+          <script>
+
+            const numberOfWeeks = parseInt(prompt("Enter a number of weeks", "1"))
+
+            let profitForWeek = 0
+            let profitForDay = 0
+            let fullProfit = 0
+
+            for (let i = 1; i <= numberOfWeeks; i++) {
+              for (let day = 1; day <= 7; day++) {
+                // не можу зрозуміти, чому не працює умова, коли я вводжу некоректні дані,
+                // тобто коли яя ввів неправильно дані коли i = 4, то мені виводить помилку і дає ще раз ввести дані, але вже для i = 5, тобто i = 4 пропускається
+                if (profitForDay < 0 || isNaN(profitForDay)) {
+                  alert('Please, enter correct data')
+                  profitForDay = parseFloat(prompt(`Enter profit for ${day} day, ${i} week`, "1"))
+                } else {
+                  profitForDay = parseFloat(prompt(`Enter profit for ${day} day, ${i} week`, "1"))
+                }
+                profitForWeek += profitForDay
+                fullProfit += profitForDay
+              }
+              document.write(`Profit for ${i} week is ${profitForWeek}$ <br>`)
+              profitForWeek = 0
+            }
+
+            document.write(`Full profit for ${numberOfWeeks} weeks is ${fullProfit.toFixed(2)}$ <br>`)
+          </script>
+        </div>
+      </div>
+    </main>
+
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- zxx -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Name</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+
+    <main class="page">
+      <div class="page__task">
+        <div class="task__container">
+          <a href="index.html" class="button-back">Back to Main</a>
+
+          <script>
+
+            const fieldWidth = 3
+            const fieldHeight = 3
+
+            const bombs = 5
+
+            const shipVertical = 1 + Math.floor(Math.random() * fieldHeight)
+            const shipHorizontal = 1 + Math.floor(Math.random() * fieldWidth)
+
+            console.log(shipVertical, shipHorizontal)
+
+            let userVertical
+            let userHorizontal
+
+            for (let attempt = 1; attempt <= bombs; attempt++) {
+              userVertical = parseInt(prompt(`Enter vertical index (1 - ${fieldHeight}) |`, "1"))
+              if (userVertical > fieldHeight) {
+                alert(`Please, enter correct data. You cannot input index more than ${fieldHeight}`)
+                userVertical = parseInt(prompt(`Enter vertical index (1 - ${fieldHeight}) |`, "1"))
+              }
+
+              userHorizontal = parseInt(prompt(`Enter horisontal index (1 - ${fieldWidth}) __`, "1"))
+              if (userHorizontal > fieldWidth) {
+                alert(`Please, enter correct data. You cannot input index more than ${fieldHeight}`)
+                userHorizontal = parseInt(prompt(`Enter horisontal index (1 - ${fieldWidth}) __`, "1"))
+              }
+
+
+              if (userVertical === shipVertical && userHorizontal === shipHorizontal) {
+                document.write('Yeah, you kill the russian ship')
+                break
+              } else {
+                if (bombs - attempt > 0) {
+                  alert(`Incorect! But you have ${bombs - attempt} yet`)
+                } else {
+                  alert('You don`t have an attempts')
+                  document.write('Sorry, you miss all the bombs. Try again later, pilot')
+                }
+              }
+            }
+
+
+
+            document.write('<table class="battle">')
+            for (let i = 1; i <= fieldHeight; i++) {
+              if (i === shipVertical) {
+                document.write(`<tr class="tr-ship">`)
+              } else {
+                document.write('<tr>')
+              }
+              for (let j = 1; j <= fieldWidth; j++) {
+                if (j === shipHorizontal) {
+                  document.write('<td class="td-ship">  </td>')
+                } else {
+                  document.write('<td>  </td>')
+                }
+              }
+              document.write('</tr>')
+            }
+            document.write('</table>')
+          </script>
+        </div>
+      </div>
+    </main>
+
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,237 @@
+@use "sass:math";
+@import "_reset.scss";
+@import "_fonts.scss";
+@import "_functions.scss";
+.wrapper {
+   overflow: clip;
+   display: flex;
+   flex-direction: column;
+   min-height: 100%;
+}
+.wrapper main {
+   flex-grow: 1;
+}
+
+[class*="__container"] {
+   max-width: toRem(1559);
+   margin: 0 auto;
+   padding: 0 toRem(15);
+}
+body {
+   background-color: #333;
+   color: #fff;
+   padding-top: toRem(70);
+}
+
+// ===================================
+
+.page {
+   font-size: toRem(30);
+   &__container {
+   }
+
+   &__body {
+   }
+
+   &__list {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: toRem(20);
+   }
+
+   &__item {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: toRem(10);
+
+      width: 100%;
+      background-color: #000;
+
+      padding: toRem(20) toRem(30);
+   }
+
+   &__title-item {
+   }
+
+   &__link {
+      font-weight: 700;
+
+      display: flex;
+      align-items: center;
+      gap: toRem(10);
+      transition: color 0.3s 0.2s;
+
+      &::before {
+         content: "";
+         width: toRem(15);
+         height: toRem(15);
+         background-color: #fae104;
+         border-radius: 50%;
+         position: relative;
+         left: 0;
+         transition: background-color 0.3s, width 0.3s 0.1s, height 0.3s 0.1s, left 0.3s 0.2s, border-radius 0.3s 0s;
+      }
+
+      @media (any-hover: hover) {
+         &:hover {
+            color: #fff9c2;
+            &::before {
+               background-color: #fff9c2;
+
+               width: toRem(25);
+               height: toRem(5);
+               border-radius: 0;
+
+               left: 100%;
+            }
+         }
+      }
+   }
+}
+button {
+   padding: toRem(10) toRem(15);
+   background-color: #ffae00;
+   color: #000;
+   border-radius: toRem(6);
+
+   transition: all 0.3s;
+   @media (any-hover: hover) {
+      &:hover {
+         background-color: #b17901;
+      }
+   }
+   &:not(:last-child) {
+      margin-bottom: toRem(10);
+   }
+}
+
+.task__list {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: toRem(15);
+   li {
+      display: flex;
+      align-items: center;
+      gap: toRem(10);
+      &::before {
+         content: "";
+         width: toRem(10);
+         height: toRem(10);
+         background-color: #fff;
+         border-radius: 50%;
+      }
+   }
+}
+
+.button-back {
+   padding: toRem(10) toRem(25);
+   background-color: #ffae00;
+   color: #000;
+   font-size: toRem(24);
+   text-align: center;
+   border-radius: toRem(8);
+
+   display: block;
+   max-width: toRem(200);
+
+   margin-bottom: toRem(30);
+
+   transition: all 0.3s;
+   @media (any-hover: hover) {
+      &:hover {
+         background-color: #b17901;
+      }
+   }
+}
+
+.product {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: toRem(15);
+   &__block {
+      display: flex;
+      align-items: center;
+      gap: toRem(10);
+   }
+}
+table {
+   border-collapse: collapse;
+   td {
+      border: 2px solid #fae104;
+      padding: toRem(5);
+   }
+}
+.battle {
+   margin-top: toRem(20);
+   td {
+      width: toRem(50);
+      height: toRem(50);
+      text-align: center;
+   }
+}
+.tr-ship {
+   .td-ship {
+      background-color: red;
+   }
+}
+
+.tables {
+   display: flex;
+   align-items: center;
+   //justify-content: space-around;
+   gap: toRem(30);
+}
+
+h2 {
+   font-size: toRem(30);
+   font-weight: 700;
+}
+p {
+   font-size: toRem(18);
+}
+
+.casino {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: toRem(15);
+
+   &__slot {
+      max-width: toRem(300);
+      padding: toRem(15);
+      background-color: #000;
+   }
+
+   &__img {
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+   }
+}
+
+.casino-result {
+   text-align: center;
+   background-color: #000;
+
+   margin: toRem(20) auto 0;
+
+   padding: toRem(20);
+   max-width: toRem(300);
+   border: 2px solid #fff;
+
+   animation: backgroundColor 1.5s ease-in-out infinite alternate;
+
+   @keyframes backgroundColor {
+      0% {
+         background-color: #000;
+      }
+      100% {
+         background-color: #5f5555;
+      }
+   }
+}

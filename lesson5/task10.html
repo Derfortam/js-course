@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- zxx -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Name</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+
+    <main class="page">
+      <div class="page__task">
+        <div class="task__container">
+          <a href="index.html" class="button-back">Back to Main</a>
+
+          <script>
+
+            let startOfSegment = parseInt(prompt("Enter a start of segment", "1"))
+            let endOfSegment = parseInt(prompt("Enter a end of segment", "1"))
+            if (startOfSegment > endOfSegment) {
+              alert("You enter a incorect data. The start of segment must be smaller than end. Enter new data")
+              startOfSegment = parseInt(prompt("Enter a start of segment", "1"))
+              endOfSegment = parseInt(prompt("Enter a end of segment", "1"))
+            }
+            let oddNumbers = 0
+            for (startOfSegment; startOfSegment < endOfSegment; startOfSegment++) {
+              if (startOfSegment % 2 === 0) {
+                oddNumbers += startOfSegment
+              }
+            }
+            document.write(`The sum of odd numbers is ${oddNumbers}`)
+          </script>
+        </div>
+      </div>
+    </main>
+
+
+  </div>
+</body>
+
+</html>

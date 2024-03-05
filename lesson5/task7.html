@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- zxx -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Name</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <main class="page">
+      <div class="page__task">
+        <div class="task__container">
+          <a href="index.html" class="button-back">Back to Main</a>
+
+          <script>
+            const paragraphNumber = parseInt(prompt("Enter paragraph number", "1"))
+            let counter = 1
+            for (let i = 1; i <= paragraphNumber; i++) {
+              document.write(`<h2>Title ${i}</h2> <br>`)
+              for (let j = 1; j <= counter; j++) {
+                document.write(`<p>Chapter ${i}, paragraph ${j}</p> <br>`)
+              }
+              counter++
+            }
+          </script>
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- zxx -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Name</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+
+    <main class="page">
+      <div class="page__task">
+        <div class="task__container">
+
+          <a href="index.html" class="button-back">Back to Main</a>
+
+          <script>
+
+            let randomImage = ["", "https://wallpapercosmos.com/w/full/a/d/d/484162-3840x2160-desktop-4k-planet-dune-background-photo.jpg", "https://images.hdqwalls.com/wallpapers/dune-part-two-minimal-5k-y2.jpg", "https://4kwallpapers.com/images/walls/thumbs_2t/11950.jpg", "https://images.hdqwalls.com/download/dune-part-two-movie-poster-h3-1152x864.jpg"]
+            let randomImageSrc = 1 + Math.floor(Math.random() * 4)
+
+            document.write('<ul class="casino">')
+            for (let i = 1; i <= 3; i++) {
+              document.write(` <li class="casino__slot">
+                        <img src="${randomImage[randomImageSrc]}" alt="image"
+                          class="casino__img">
+                      </li>`)
+            }
+            document.write('</ul> <br>')
+
+            let casinoResult = ""
+            switch (randomImageSrc) {
+              case 1:
+                casinoResult += "Wow, you win 100$"
+                break
+              case 2:
+                casinoResult += "Wow, you win 200$"
+                break
+              case 3:
+                casinoResult += "Wow, you win 500$"
+                break
+              case 4:
+                casinoResult += "Fantastic, you win 1000$! Great!"
+                break
+            }
+            document.write(`<div class="casino-result">${casinoResult}</div>`)
+
+          </script>
+        </div>
+      </div>
+    </main>
+
+
+  </div>
+</body>
+
+</html>
