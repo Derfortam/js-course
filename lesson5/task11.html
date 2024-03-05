@@ -30,7 +30,7 @@
             let oddNumbers = 0
             let counter = 0
             exit: for (startOfSegment; startOfSegment < endOfSegment; startOfSegment++) {
-              if (startOfSegment % 2 === 0) {
+              if (startOfSegment % 2 !== 0) {
                 oddNumbers += startOfSegment
                 document.write(startOfSegment + '<br>')
                 counter++
