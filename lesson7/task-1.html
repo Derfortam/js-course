@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Task 1</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <main class="page">
+      <img src="img/background.jpg" alt="image" class="page__background">
+      <div class="page__titling">
+        <h1 class="page__title">Task 1</h1>
+        <a href="index.html" class="page__back">Go Back</a>
+      </div>
+      <div class="page__tasks tasks">
+        <div class="tasks__answer">
+
+          <script>
+
+            function giveMonthNameByNumber(number) {
+              switch (number) {
+                case 1:
+                  return "January"
+                  break
+                case 2:
+                  return "Fabruary"
+                  break
+                case 3:
+                  return "March"
+                  break
+                case 4:
+                  return "April"
+                  break
+                case 5:
+                  return "May"
+                  break
+                case 6:
+                  return "June"
+                  break
+                case 7:
+                  return "July"
+                  break
+                case 8:
+                  return "August"
+                  break
+                case 9:
+                  return "September"
+                  break
+                case 10:
+                  return "October"
+                  break
+                case 11:
+                  return "November"
+                  break
+                case 12:
+                  return "December"
+                  break
+                default:
+                  return "Enter correct data"
+                  break
+              }
+            }
+
+            let ourNumber = giveMonthNameByNumber(12)
+            document.write(`${ourNumber} <br>`)
+
+            let userNumber = parseInt(prompt("Enter number between 1 and 12", "1"))
+            document.write(`You write a ${userNumber} and it is a ${giveMonthNameByNumber(userNumber)}`)
+
+          </script>
+
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+<script src="js/script.js"></script>
+
+</html>

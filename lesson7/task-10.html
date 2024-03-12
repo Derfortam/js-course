@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<!-- zxx -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!--! <link rel="shortcut icon" href="" type="image/x-icon"> -->
+  <title>Task 10</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <main class="page">
+      <img src="img/background.jpg" alt="image" class="page__background">
+      <div class="page__titling">
+        <h1 class="page__title">Task 10</h1>
+        <a href="index.html" class="page__back">Go Back</a>
+      </div>
+      <div class="page__tasks tasks">
+        <div class="tasks__answer">
+          <script>
+            /* Дано покази температур (довільна кількість). Розробити 
+            функцію, яка дозволить знайти середнє значення для додатних показів 
+            температури.
+            */
+
+            function getAverageTenperature() {
+              let moreThanZero = 0
+              let count = 0
+
+              for (let i = 0; i < arguments.length; i++) {
+                if (arguments[i] > 0 && arguments[i] !== 0) {
+                  moreThanZero += arguments[i]
+                  count++
+                }
+              }
+              let averageTemperature = moreThanZero / count
+              return averageTemperature
+
+            }
+
+            document.write(getAverageTenperature(5, -1, 0, 5, 10, 10))
+
+          </script>
+
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+<script src="js/script.js"></script>
+
+</html>

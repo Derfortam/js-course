@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Task 8</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <main class="page">
+      <img src="img/background.jpg" alt="image" class="page__background">
+      <div class="page__titling">
+        <h1 class="page__title">Task 8</h1>
+        <a href="index.html" class="page__back">Go Back</a>
+      </div>
+      <div class="page__tasks tasks">
+        <div class="tasks__answer">
+
+          <script>
+            /*
+            Створити функцію, яка виводить банер, 
+            у функцію передаються: зображення, заголовок та посилання, куди
+              переходимо при кліку на зображення
+             */
+
+            function createCustomBaner(imageSrc, title, link) {
+              document.write('<div class="baner">');
+              document.write(`<a target="_blank" href="${link}" class="baner__link">`);
+              document.write(`<h2 class="baner__title">${title}</h2>`);
+              document.write(`<img src="${imageSrc}" alt="image" class="baner__image">`);
+              document.write('</a>');
+              document.write('</div>');
+            }
+
+            function getBaner() {
+              let createUserBannerImage = prompt("Enter image global src:")
+              let createUserBannerTitle = prompt("Enter title:")
+              let createUserBannerLink = prompt("Enter link:")
+              createCustomBaner(createUserBannerImage, createUserBannerTitle, createUserBannerLink)
+            }
+
+
+            createCustomBaner('https://assets-prd.ignimgs.com/2022/08/02/lord-of-the-rings-thumbnail-1659474646743.jpg', "The lord of The rings", "https://google.com")
+            createCustomBaner('https://images.hdqwalls.com/wallpapers/dune-part-2-2024-hc.jpg', "Dune: Part Two", "https://google.com")
+
+          </script>
+
+
+
+
+
+          <!-- 
+          <div class="banner">
+            <a target="_blank" href="#" class="baner__link">
+              <h2 class="baner__title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quis ipsum nesciunt
+                quas rem necessitatibus veritatis praesentium sint assumenda fugit hic laudantium, sit fugiat distinctio
+                eius obcaecati accusamus aliquam? Sed!</h2>
+              <img src="https://images.hdqwalls.com/wallpapers/dune-part-2-2024-hc.jpg" alt="image"
+                class="baner__image">
+            </a>
+          </div> -->
+
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+<script src="js/script.js"></script>
+
+</html>

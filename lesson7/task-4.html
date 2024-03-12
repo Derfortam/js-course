@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Task 4</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <main class="page">
+      <img src="img/background.jpg" alt="image" class="page__background">
+      <div class="page__titling">
+        <h1 class="page__title">Task 4</h1>
+        <a href="index.html" class="page__back">Go Back</a>
+      </div>
+      <div class="page__tasks tasks">
+        <div class="tasks__answer">
+
+          <script>
+            /*
+           Створити функцію, яка для 3 заданих чисел знаходить 
+           одночасно декілька результатів: кількість парних,
+            кількість додатних, кількість більших за 100.
+             */
+
+            function manipulationsWithThreeNumbers(num1, num2, num3) {
+              let countOfEvenNumbers = 0
+              let positiveNumbers = 0
+              let moreThanOneHungred = 0
+              for (let i = 0; i < arguments.length; i++) {
+                if (arguments[i] % 2 === 0) {
+                  countOfEvenNumbers++
+                }
+                if (arguments[i] > 0) {
+                  positiveNumbers++
+                }
+                if (arguments[i] > 100) {
+                  moreThanOneHungred++
+                }
+              }
+              return `From this three numbers we have ${countOfEvenNumbers} even number(s), ${positiveNumbers} positive number(s) and ${moreThanOneHungred} number(s) more than 100`
+            }
+
+            document.write(manipulationsWithThreeNumbers(3, 4, 112))
+
+          </script>
+
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+<script src="js/script.js"></script>
+
+</html>

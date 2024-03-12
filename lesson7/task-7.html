@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Task 7</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <main class="page">
+      <img src="img/background.jpg" alt="image" class="page__background">
+      <div class="page__titling">
+        <h1 class="page__title">Task 7</h1>
+        <a href="index.html" class="page__back">Go Back</a>
+      </div>
+      <div class="page__tasks tasks">
+        <div class="tasks__answer">
+
+          <div class="tasks__random-image">
+            <!-- <img src="img/img1.jpg" alt="Image" class="tasks__image-random"> -->
+            <script>
+              /*
+             Створити функцію, яка випадковим чином виводить 
+             на екран одне із 4 зображень 
+             (шляхи до зображень передаються у функцію)
+               */
+
+
+              function getRandomPhoto(img1, img2, img3, img4) {
+                let imageArray = [img1, img2, img3, img4]
+                const randomImageNumber = Math.floor(Math.random() * 4)
+
+                const result = imageArray[randomImageNumber]
+                return document.write(`<img src="${result}" alt="Image" class="tasks__image-random">`)
+
+                // return document.write(`<img src="img/img${randomImageNumber}.jpg" alt="Image" class="tasks__image-random">`)
+              }
+
+
+              getRandomPhoto("img/img1.jpg", "img/img2.jpg", "img/img3.jpg", "img/img4.jpg")
+              getRandomPhoto("img/img1.jpg", "img/img2.jpg", "img/img3.jpg", "img/img4.jpg")
+              getRandomPhoto("img/img1.jpg", "img/img2.jpg", "img/img3.jpg", "img/img4.jpg")
+              getRandomPhoto("img/img1.jpg", "img/img2.jpg", "img/img3.jpg", "img/img4.jpg")
+            </script>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+<script src="js/script.js"></script>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Task 6</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <main class="page">
+      <img src="img/background.jpg" alt="image" class="page__background">
+      <div class="page__titling">
+        <h1 class="page__title">Task 6</h1>
+        <a href="index.html" class="page__back">Go Back</a>
+      </div>
+      <div class="page__tasks tasks">
+        <div class="tasks__answer">
+
+          <script>
+            /*
+             Створити функцію, яка створює таблицю з 
+             вказаною кількістю рядків і стовпців (таблиця 
+             заповнюється заданим фіксованим повідомленням).
+             */
+
+            function createTable(rowNumber, columnNumber, data) {
+              rowNumber = parseInt(rowNumber)
+              columnNumber = parseInt(columnNumber)
+
+              document.write('<table class="table">')
+              for (let i = 0; i < rowNumber; i++) {
+                document.write('<tr>')
+                for (let j = 0; j < columnNumber; j++) {
+                  document.write(`<td>${data}</td>`)
+                }
+                document.write('</tr>')
+              }
+              document.write('</table>')
+            }
+
+
+            createTable(5, 4, "Ciao")
+
+            createTable(5, 4, 0)
+
+          </script>
+
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+<script src="js/script.js"></script>
+
+</html>

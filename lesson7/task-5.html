@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Task 5</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <main class="page">
+      <img src="img/background.jpg" alt="image" class="page__background">
+      <div class="page__titling">
+        <h1 class="page__title">Task 5</h1>
+        <a href="index.html" class="page__back">Go Back</a>
+      </div>
+      <div class="page__tasks tasks">
+        <div class="tasks__answer">
+
+          <script>
+            /*
+            Створити окремі функції, які переводять:
+            Сантиметри у дюйми;
+            Кілограми у фунти;
+            Кілометри у милі.
+             */
+
+            function centimetersInInches(centimeters) {
+              const inchesInCentimeters = 0.3937
+              let result = centimeters * inchesInCentimeters
+              result = result.toFixed(2)
+              return result
+            }
+
+            function kilogramsToPounds(kilograms) {
+              const poundsInKilogram = 2.20462
+              let result = kilograms * poundsInKilogram
+              result = result.toFixed(2)
+              return result
+            }
+
+            function kilometersInMiles(kilometers) {
+              const milesInKilometer = 0.6213
+              let result = kilometers * milesInKilometer
+              result = result.toFixed(2)
+              return result
+            }
+
+
+            console.log(centimetersInInches(10))
+            console.log(kilogramsToPounds(3))
+            console.log(kilometersInMiles(133))
+
+            let userCentimeters = parseFloat(prompt("Enter a count of centimeters:", "1"))
+            document.write(`${userCentimeters} centimeters is equal to ${centimetersInInches(userCentimeters)} inches <br>`)
+
+            let userKilograms = parseFloat(prompt("Enter a count of kilograms:", "1"))
+            document.write(`${userKilograms} kilograms is equal to ${kilogramsToPounds(userKilograms)} pounds <br>`)
+
+            let userKilometers = parseFloat(prompt("Enter a count of kilometers:", "1"))
+            document.write(`${userKilometers} kilometers is equal to ${kilometersInMiles(userKilometers)} miles`)
+          </script>
+
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+<script src="js/script.js"></script>
+
+</html>

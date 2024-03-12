@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<!-- zxx -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!--! <link rel="shortcut icon" href="" type="image/x-icon"> -->
+  <title>Task 0</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <main class="page">
+      <img src="img/background.jpg" alt="image" class="page__background">
+      <div class="page__titling">
+        <h1 class="page__title">Task 0</h1>
+        <a href="index.html" class="page__back">Go Back</a>
+      </div>
+      <div class="page__tasks tasks">
+        <div class="tasks__answer">
+
+          <script>
+
+            function giveMonthName(number) {
+              switch (number) {
+                case 12:
+                case 1:
+                case 2:
+                  return "Winter"
+                  break
+                case 3:
+                case 4:
+                case 5:
+                  return "Spring"
+                  break
+                case 6:
+                case 7:
+                case 8:
+                  return "Summer"
+                  break
+                case 9:
+                case 10:
+                case 11:
+                  return "Fall"
+                  break
+                default:
+                  return "Enter correct data"
+                  break
+              }
+            }
+
+            let ourNumber = giveMonthName(12)
+            document.write(`${ourNumber} <br>`)
+
+            let userNumber = parseInt(prompt("Enter number between 1 and 12", "1"))
+            document.write(`${giveMonthName(userNumber)}`)
+
+          </script>
+
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+<script src="js/script.js"></script>
+
+</html>

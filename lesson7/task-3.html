@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Task 3</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <main class="page">
+      <img src="img/background.jpg" alt="image" class="page__background">
+      <div class="page__titling">
+        <h1 class="page__title">Task 3</h1>
+        <a href="index.html" class="page__back">Go Back</a>
+      </div>
+      <div class="page__tasks tasks">
+        <div class="tasks__answer">
+
+          <script>
+            /*   
+            Створити окремі функції, які для 4 чисел знаходять:
+            1)суму;
+            2)добуток;
+            3)середнє арифметичне;
+            4)мінімальне значення. 
+             */
+
+            const convertToFloat = (n1, n2, n3, n4) => {
+              n1 = parseFloat(n1)
+              n2 = parseFloat(n2)
+              n3 = parseFloat(n3)
+              n4 = parseFloat(n4)
+            }
+
+            const getSumFourNumbers = (n1, n2, n3, n4) => {
+              convertToFloat(n1, n2, n3, n4)
+
+              let result = n1 + n2 + n3 + n4
+              return result
+            }
+
+            const getMultiplicationFourNumbers = (n1, n2, n3, n4) => {
+              convertToFloat(n1, n2, n3, n4)
+
+              let result = n1 * n2 * n3 * n4
+              return result
+            }
+
+
+            const getAverageFourNumbers = (n1, n2, n3, n4) => {
+              convertToFloat(n1, n2, n3, n4)
+
+              let sumOfTheNumbers = getSumFourNumbers(n1, n2, n3, n4)
+              let result = sumOfTheNumbers / 4
+              return result
+            }
+
+
+            const getMinimalFourNumbers = (n1, n2, n3, n4) => {
+              convertToFloat(n1, n2, n3, n4)
+
+              let result = Math.min(n1, n2, n3, n4)
+              return result
+            }
+
+
+
+            console.log(getSumFourNumbers(3, 5, 1, 2))
+            console.log(getMultiplicationFourNumbers(3, 5, 1, 2))
+            console.log(getAverageFourNumbers(5, 5, 3, 3))
+            console.log(getMinimalFourNumbers(5, 5, -3, 3))
+
+            alert("Write four any numbers")
+            let n1
+            let n2
+            let n3
+            let n4
+
+            for (let i = 1; i <= 4; i++) {
+              if (i == 1) {
+                n1 = parseFloat(prompt("Enter any first number "))
+              } else if (i == 2) {
+                n2 = parseFloat(prompt("Enter any second number"))
+              } else if (i == 3) {
+                n3 = parseFloat(prompt("Enter any third number"))
+              } else {
+                n4 = parseFloat(prompt("Enter any fourth number"))
+              }
+            }
+            document.write(`So, if we have this numbers: ${n1}, ${n2}, ${n3}, ${n4} we get: <br>`)
+            document.write(`The sum of this numbers is equal to ${getSumFourNumbers(n1, n2, n3, n4)}. =====> ((${n1} + ${n2} + ${n3} + ${n4}) <br>`)
+            document.write(`The multiplication of this numbers is equal to ${getMultiplicationFourNumbers(n1, n2, n3, n4)}. =====> (${n1} * ${n2} * ${n3} * ${n4}) <br>`)
+            document.write(`The average of this numbers is equal to ${getAverageFourNumbers(n1, n2, n3, n4)}. =====> ( (${n1} + ${n2} + ${n3} + ${n4}) / 4 ) <br>`)
+            document.write(`The minimal number of this numbers is equal to ${getMinimalFourNumbers(n1, n2, n3, n4)}`)
+
+          </script>
+
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+<script src="js/script.js"></script>
+
+</html>
