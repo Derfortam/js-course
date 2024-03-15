@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<!-- zxx -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!--! <link rel="shortcut icon" href="" type="image/x-icon"> -->
+  <title>Task 8</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <main class="page">
+      <img src="img/back.jpg" alt="image" class="page__background">
+      <div class="page__titling">
+        <h1 class="page__main-title">Task 8</h1>
+        <a href="index.html" class="page__back">Back to Home page</a>
+      </div>
+
+      <div class="page__task task">
+        <div class="task__body">
+          <span>The result will be in console</span><br>
+          <button onclick="startGame()">Start</button>
+          <script>
+            /*
+            Дано одновимірний масив, у якому зберігається певна виграшна сума
+            (елементи заповнюються випадковим чином значеннями від -500 до 500). 
+            Надаючи користувачу можливість вибирати номери елементів  (поки він не відмовиться). 
+            Знаходити сумарний виграш.
+             */
+
+            let winSum = []
+
+            function generatePriceArray(array, iterations) {
+              let randomNumber
+              array = []
+              for (let i = 0; i < iterations; i++) {
+                randomNumber = Math.floor(Math.random() * 1000 - 500)
+                array.push(randomNumber)
+              }
+              return array
+            }
+
+
+            function chooseElementsInArray(array) {
+              let mode = true
+              let userNumber
+              let theSum = 0
+              while (mode) {
+                userNumber = parseInt(prompt(`Enter a number between 1 and ${array.length}. To stop enter 0:`))
+                if (userNumber === 0) break
+                else theSum += array[userNumber - 1]
+              }
+              return `The result is ${theSum}`
+            }
+
+
+            const newArray = generatePriceArray(winSum, 10)
+            console.log(newArray);
+
+            function startGame() {
+              console.log(chooseElementsInArray(newArray))
+            }
+
+
+
+
+          </script>
+
+
+        </div>
+      </div>
+    </main>
+
+
+  </div>
+</body>
+
+<script src="js/script.js"></script>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<!-- zxx -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Task 9</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <main class="page">
+      <img src="img/back.jpg" alt="image" class="page__background">
+      <div class="page__titling">
+        <h1 class="page__main-title">Task 9</h1>
+        <a href="index.html" class="page__back">Back to Home page</a>
+      </div>
+
+      <div class="page__task task">
+        <div class="task__body">
+
+          <button onclick="startButtle()">Start Battle</button>
+          <script>
+            /*
+                 Морський бій. Користувач вводить кількість клітинок одновимірного масиву та кількість одиночних
+                кораблів. Комп’ютер довільно розміщує ці одиночні кораблі у масиві по один у клітинці (якщо у клітинці
+                0, то клітинка пуста, якщо 1 – то це означає, що там є корабель. Користувач вводить номер клітинки, куди
+                стріляє. Гра продовжується до тих пір, поки не будуть потоплені усі кораблі.
+             */
+
+
+
+            let ships = parseInt(prompt("Enter ships num:", "1"))
+            let boxes = parseInt(prompt("Enter boxes of field num:", "1"))
+
+            if (ships > boxes) {
+              let tmp = boxes
+              boxes = ships
+              ships = tmp
+            }
+
+            function generateWarTable(boxes, ships) {
+              let result = []
+              for (let i = 0; i < boxes; i++) {
+                result.push(0)
+              }
+              for (let j = 0; j < ships; j++) {
+                let randomIndex
+                do {
+                  randomIndex = Math.floor(Math.random() * boxes)
+                } while (result[randomIndex] === 1)
+                result[randomIndex] = 1
+              }
+              return result
+            }
+
+            const newTable = generateWarTable(boxes, ships)
+
+            console.log(newTable)
+
+            function startButtle() {
+              let crashShips = 0
+              let userCoordinate
+              while (crashShips !== ships) {
+                userCoordinate = parseInt(prompt(`Enter coordinate between 0 and ${boxes - 1}`))
+                if (newTable[userCoordinate] === 1) {
+                  alert('Cool')
+                  crashShips++
+                } else {
+                  alert('Bad')
+                }
+              }
+            }
+
+          </script>
+
+
+        </div>
+      </div>
+    </main>
+
+
+  </div>
+</body>
+
+<script src="js/script.js"></script>
+
+</html>

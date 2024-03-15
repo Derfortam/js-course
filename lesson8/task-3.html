@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<!-- zxx -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!--! <link rel="shortcut icon" href="" type="image/x-icon"> -->
+  <title>Task 3</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <main class="page">
+      <img src="img/back.jpg" alt="image" class="page__background">
+      <div class="page__titling">
+        <h1 class="page__main-title">Task 3</h1>
+        <a href="index.html" class="page__back">Back to Home page</a>
+      </div>
+
+      <div class="page__task task">
+        <div class="task__body">
+
+          <script>
+            /*
+             Дано послідовність оцінок учня. Підрахувати кількість:
+             1)	двійок
+             2)	кількість хороших оцінок (добре, відмінно);
+             3)	кількість оцінок, які нижче середнього.
+             */
+
+            const studentGrades = [2, 5, 4, 3, 2]
+
+            function countGrades(arrayGrades, condition) {
+              let result = 0
+              for (let i = 0; i < arrayGrades.length; i++) {
+                if (condition(arrayGrades[i])) {
+                  result++
+                }
+              }
+              return result
+            }
+
+            function isBad(grade) {
+              return grade === 2
+            }
+
+            function isGood(grade) {
+              return grade > 3
+            }
+
+            function getAverageFromArray(array) {
+              let sum = 0
+              let result
+              for (let i = 0; i < array.length; i++) {
+                sum = array[i]
+              }
+              result = sum / array.length
+              return result
+            }
+
+
+            function getGradesLessThanAverage(grade) {
+              return grade < getAverageFromArray(studentGrades)
+            }
+
+
+
+            console.log(countGrades(studentGrades, isBad))
+            console.log(countGrades(studentGrades, isGood))
+            console.log(countGrades(studentGrades, getAverageFromArray))
+
+
+          </script>
+
+
+        </div>
+      </div>
+    </main>
+
+
+  </div>
+</body>
+
+<script src="js/script.js"></script>
+
+</html>

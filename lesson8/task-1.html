@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<!-- zxx -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!--! <link rel="shortcut icon" href="" type="image/x-icon"> -->
+  <title>Task 1</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <main class="page">
+      <img src="img/back.jpg" alt="image" class="page__background">
+      <div class="page__titling">
+        <h1 class="page__main-title">Task 1</h1>
+        <a href="index.html" class="page__back">Back to Home page</a>
+      </div>
+
+      <div class="page__task task">
+        <div class="task__body">
+
+          <script>
+            /*
+             Дано масив, який містить оцінки
+             з К предметів. Знайти середній бал 
+             і з’ясувати до якої категорії він відноситься
+              (відмінник, двійочник (має хоча би одну двійку),
+               хорошист (оцінки добре і відмінно), трійочник(є хоча би одна трійка)).
+             */
+
+
+
+            const grades = [6, 2, 9, 10, 12, 8, 10, 11, 8, 9, 12]
+
+            const averageGrades = (ourGrades) => {
+              let average = 0
+              for (let i = 0; i < ourGrades.length; i++) {
+                average += ourGrades[i]
+              }
+              let result = average / ourGrades.length
+              return result
+            }
+
+            const studentsCategory = (studentGrades) => {
+              let result
+              for (let i = 0; i < studentGrades.length; i++) {
+                if (studentGrades[i] === 2) {
+                  result = "Bad student"
+                  break
+                } else if (studentGrades[i] >= 6 && studentGrades[i] <= 9) {
+                  result = "Good student"
+                  break
+                } else if (studentGrades[i] === 3) {
+                  result = "Not too bad student"
+                } else {
+                  result = "Exelent student"
+                }
+              }
+              return result
+            }
+
+            console.log(averageGrades(grades))
+            console.log(studentsCategory(grades))
+
+            document.write(`The student average grade is ${averageGrades(grades)}`)
+
+
+          </script>
+
+
+        </div>
+      </div>
+    </main>
+
+
+  </div>
+</body>
+
+<script src="js/script.js"></script>
+
+</html>
