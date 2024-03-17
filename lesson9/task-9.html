@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<!-- zxx -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!--! <link rel="shortcut icon" href="" type="image/x-icon"> -->
+  <title>Task 9</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <main class="page">
+      <img src="img/background.jpg" alt="image" class="page__background">
+      <div class="page__titling">
+        <h1 class="page__title">Task 9</h1>
+        <a href="index.html" class="page__back">Go Back</a>
+      </div>
+      <div class="page__tasks tasks">
+        <div class="tasks__answer">
+
+          <script>
+            /*
+            Дано масив імен. Сформувати масив з перших літер цих імен.
+            */
+
+            const names = ['Gallek', 'Paul', 'Leto', 'Jessika', 'Chani', 'Feyd-Rauta', 'Shaddam', 'Stilgar', 'Duncan', 'Sufir', 'Raban']
+
+            // let arrayWithFirstLetterOfNames = names.filter(
+            //   (element, index) => element[0]
+            // )
+            let arrayWithFirstLetterOfNames = names.map(
+              (element, index) => element[0]
+            )
+            document.write(`New array: ${arrayWithFirstLetterOfNames}`)
+
+
+
+          </script>
+
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+<script src="js/script.js"></script>
+
+</html>

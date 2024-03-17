@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Task 8</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <main class="page">
+      <img src="img/background.jpg" alt="image" class="page__background">
+      <div class="page__titling">
+        <h1 class="page__title">Task 8</h1>
+        <a href="index.html" class="page__back">Go Back</a>
+      </div>
+      <div class="page__tasks tasks">
+        <div class="tasks__answer">
+
+          <script>
+            /*
+            Дано масив номерів авто. Сформувати новий масив тих, які починаються на «А»
+             */
+
+            let carsIdentity = ['AB2049HP', 'SB2049FP', 'LW2589DP', 'SV1449HP', 'AB7749PR', 'AD3449HP', 'SB2888HP']
+            document.write(`Original array: ${carsIdentity} <br>`)
+
+
+            let carsIdentityWithA = carsIdentity.filter(
+              (element, index) => element[0] === 'A'
+            )
+            document.write(`New array: ${carsIdentityWithA}`)
+
+
+          </script>
+
+
+
+
+
+          <!-- 
+          <div class="banner">
+            <a target="_blank" href="#" class="baner__link">
+              <h2 class="baner__title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quis ipsum nesciunt
+                quas rem necessitatibus veritatis praesentium sint assumenda fugit hic laudantium, sit fugiat distinctio
+                eius obcaecati accusamus aliquam? Sed!</h2>
+              <img src="https://images.hdqwalls.com/wallpapers/dune-part-2-2024-hc.jpg" alt="image"
+                class="baner__image">
+            </a>
+          </div> -->
+
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+<script src="js/script.js"></script>
+
+</html>

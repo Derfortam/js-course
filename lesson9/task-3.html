@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Task 3</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <main class="page">
+      <img src="img/background.jpg" alt="image" class="page__background">
+      <div class="page__titling">
+        <h1 class="page__title">Task 3</h1>
+        <a href="index.html" class="page__back">Go Back</a>
+      </div>
+      <div class="page__tasks tasks">
+        <div class="tasks__answer">
+
+          <script>
+            /*
+             Користувач вводить кількість елементів. Створити масив, у якому перші 5 елементів заповнені 1-цями, а інші до кінця масиву заповнені 7-ками.
+             */
+
+
+            let userArrayLength = parseInt(prompt(`Enter a array length:`, "2"))
+            if (userArrayLength === 1) userArrayLength = parseInt(prompt(`Enter a array length (more than 0 and 1!!!!):`, "2"))
+            let newArray = new Array(userArrayLength).fill(1, 0, 5)
+            newArray.fill(7, 5, userArrayLength + 1)
+            document.writeln(newArray)
+
+
+          </script>
+
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+<script src="js/script.js"></script>
+
+</html>
