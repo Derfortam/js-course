@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<!-- zxx -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Home Page</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <main class="page">
+      <img src="img/background.jpg" alt="image" class="page__background">
+      <div class="page__tasks tasks">
+
+        <div id="baner" class="tasks__baner baner">
+          <script>
+            class Baner {
+              constructor(arr) {
+                this.arrSites = arr
+              }
+              getRandomObj() {
+                let randomIndex = Math.floor(Math.random() * this.arrSites.length)
+                return this.arrSites[randomIndex]
+              }
+              getBaner() {
+                let randomObject = this.getRandomObj()
+                let url = randomObject.url
+                let img = randomObject.img
+
+                let result = `
+        <a href='${url}'>Link</a>
+          <img src='${img}' alt="image">
+      `
+                return result
+              }
+            }
+            let sites = [
+              {
+                url: "https://www.google.com/",
+                img: "../img/background.jpg",
+              },
+              {
+                url: "https://www.google.com/",
+                img: "https://marketplace.canva.com/EAFPzbZddXA/1/0/1600w/canva-black-and-white%2C-illustration-and-cool%2C-desktop-wallpaper-Oy1LJ3M9RIs.jpg",
+              },
+              {
+                url: "https://www.google.com/",
+                img: "https://www.androidauthority.com/wp-content/uploads/2024/02/Cool-wallpaper-1.jpg",
+              },
+              {
+                url: "https://www.google.com/",
+                img: "https://lh3.googleusercontent.com/proxy/Svdv6yUljfoBcXNWNJz_nWKvAh0up5Hr4IJq6jTuoNr6Z_RtK9QTawmezL8LOnICedgeINXZhL-xN5zBnIadzOu9197A7JNI51dA0YNzL82pbJUhYvVsZJ1jf65ySsjdPg",
+              },
+            ]
+
+            let newBaner = new Baner(sites)
+            document.write(newBaner.getBaner())
+          </script>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+
+
+</html>
