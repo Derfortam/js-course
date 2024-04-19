@@ -1,0 +1,211 @@
+@use "sass:math";
+@import "_reset.scss";
+@import "_fonts.scss";
+@import "_functions.scss";
+.wrapper {
+   overflow: clip;
+   display: flex;
+   flex-direction: column;
+   min-height: 100%;
+}
+.wrapper main {
+   flex-grow: 1;
+}
+//* container can changes
+[class*="__container"] {
+   max-width: toRem(1259);
+   margin: 0 auto;
+   padding: 0 toRem(15);
+}
+body {
+   color: #ff9900;
+}
+
+.page {
+   position: relative;
+   z-index: 2;
+   padding: toRem(50) toRem(70);
+   display: flex;
+   flex-direction: column;
+   gap: toRem(60);
+   align-items: flex-start;
+
+   &__background {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      object-fit: cover;
+   }
+
+   &__title {
+      font-family: Dune Rise;
+      font-size: toRem(30);
+      font-weight: 700;
+   }
+
+   &__tasks {
+   }
+   &__titling {
+      display: flex;
+      flex-direction: column;
+      gap: toRem(20);
+      align-items: flex-start;
+   }
+
+   &__back {
+      font-size: toRem(22);
+      padding: toRem(10) toRem(15);
+      background-color: #fc7a00;
+      color: #000;
+      border-radius: toRem(2);
+      transition: all 0.3s;
+      @media (any-hover: hover) {
+         &:hover {
+            background-color: #ad5400;
+         }
+      }
+   }
+}
+
+.tasks {
+   &__list {
+      display: flex;
+      flex-direction: column;
+      gap: toRem(20);
+      align-items: flex-start;
+   }
+
+   &__item {
+      display: flex;
+      flex-direction: column;
+      gap: toRem(10);
+      align-items: flex-start;
+      &:not(:last-child) {
+         padding-bottom: toRem(20);
+         border-bottom: 2px solid #ff9900;
+      }
+   }
+
+   &__link {
+      font-size: toRem(26);
+      font-weight: 700;
+      transition: all 0.3s;
+      @media (any-hover: hover) {
+         &:hover {
+            color: #ce7b00;
+            text-decoration: underline;
+         }
+      }
+   }
+
+   &__description {
+      font-size: toRem(20);
+   }
+
+   &__answer {
+      font-size: toRem(22);
+      font-weight: 500;
+      line-height: 1.5;
+   }
+
+   &__random-image {
+      max-width: toRem(500);
+      display: flex;
+      flex-direction: column;
+      gap: toRem(20);
+   }
+
+   &__image-random {
+      aspect-ratio: 6 / 3;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+}
+
+.baner {
+   // width: toRem(500);
+   margin: toRem(20);
+   @media (any-hover: hover) {
+      &:hover {
+         .baner__title {
+            font-size: toRem(20);
+         }
+         .baner__image {
+            filter: blur(0);
+         }
+      }
+   }
+
+   &__link {
+      aspect-ratio: 6 / 3;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      width: toRem(500);
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      display: block;
+      padding: toRem(30) toRem(50);
+   }
+
+   &__title {
+      position: relative;
+      z-index: 3;
+      font-weight: 700;
+      font-size: toRem(40);
+      color: #fff;
+      top: 0;
+      transition: all 0.3s;
+   }
+
+   &__image {
+      position: absolute;
+      filter: blur(2px);
+      aspect-ratio: 4 / 3;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      left: 0;
+      top: 0;
+      transition: all 0.3s;
+   }
+}
+
+.table {
+   margin: toRem(20);
+   border-collapse: collapse;
+
+   tr {
+   }
+
+   td {
+      padding: toRem(8);
+      border: 2px solid #dddddd;
+   }
+}
+
+.baner {
+   max-width: toRem(600);
+   width: 100%;
+   font-size: toRem(36);
+   font-weight: 800;
+   color: #000;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   gap: toRem(20);
+   align-items: center;
+   background-color: #ce7b00;
+   padding: toRem(30);
+   img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 6 / 2;
+      object-fit: cover;
+   }
+}
