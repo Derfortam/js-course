@@ -1,0 +1,162 @@
+@use "sass:math";
+@import "_reset.scss";
+@import "_fonts.scss";
+@import "_functions.scss";
+.wrapper {
+   overflow: clip;
+   display: flex;
+   flex-direction: column;
+   min-height: 100%;
+}
+.wrapper main {
+   flex-grow: 1;
+}
+//* container can changes
+[class*="__container"] {
+   max-width: toRem(1259);
+   margin: 0 auto;
+   padding: 0 toRem(15);
+}
+body {
+   color: #ff9900;
+}
+
+.page {
+   position: relative;
+   z-index: 2;
+   padding: toRem(50) toRem(70);
+   display: flex;
+   flex-direction: column;
+   gap: toRem(60);
+   align-items: flex-start;
+
+   &__background {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      object-fit: cover;
+   }
+
+   &__title {
+      font-family: Dune Rise;
+      font-size: toRem(30);
+      font-weight: 700;
+   }
+
+   &__titling {
+      display: flex;
+      flex-direction: column;
+      gap: toRem(20);
+      align-items: flex-start;
+   }
+
+   &__back {
+      font-size: toRem(22);
+      padding: toRem(10) toRem(15);
+      background-color: #fc7a00;
+      color: #000;
+      border-radius: toRem(2);
+      transition: all 0.3s;
+      @media (any-hover: hover) {
+         &:hover {
+            background-color: #ad5400;
+         }
+      }
+   }
+}
+
+.tasks {
+   display: flex;
+   flex-direction: column;
+   gap: toRem(60);
+   &__block {
+      padding: toRem(40);
+      border: 1px solid #ff9900;
+      display: flex;
+      flex-direction: column;
+      gap: toRem(10);
+   }
+
+   &__title {
+      font-size: toRem(30);
+      font-weight: 600;
+   }
+
+   &__body {
+      display: flex;
+      flex-direction: column;
+      gap: toRem(10);
+   }
+
+   &__label {
+      font-size: toRem(22);
+      display: flex;
+      gap: toRem(10);
+      align-items: center;
+   }
+
+   &__number {
+      background-color: #0f0e06;
+      // height: toRem(40);
+      padding: toRem(10) toRem(12);
+      color: #ff9900;
+      border: 1px solid #ff9900;
+   }
+
+   &__actions {
+      display: flex;
+      gap: toRem(20);
+   }
+
+   &__button-action {
+      align-self: flex-start;
+      background-color: #ff9900;
+      color: #000000;
+      padding: toRem(10) toRem(20);
+      border-radius: toRem(8);
+      transition: all 0.3s;
+      @media (any-hover: hover) {
+         &:hover {
+            background-color: #3b2400;
+            color: #c5c5c5;
+         }
+      }
+   }
+   &__select {
+      background-color: #ff9900;
+      color: #000000;
+      padding: toRem(10) toRem(20);
+   }
+
+   &__result {
+      font-size: toRem(20);
+      font-weight: 500;
+   }
+
+   &__table {
+      border-collapse: collapse;
+      tr,
+      td {
+         padding: toRem(10);
+         border: 1px solid #ff9900;
+      }
+   }
+   &__list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: toRem(15);
+   }
+   &__area {
+      border: 1px solid #fc7a00;
+      border-radius: toRem(12);
+      padding: toRem(20) toRem(40);
+      legend {
+         font-size: toRem(25);
+         word-wrap: 600px;
+      }
+   }
+}

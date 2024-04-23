@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<!-- zxx -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Home Page</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <main class="page">
+      <img src="img/background.jpg" alt="image" class="page__background">
+      <h2 class="page__title">Home Work 18</h2>
+      <div class="page__tasks tasks">
+        <div class="tasks__block">
+          <h3 class="tasks__title">Task #1</h3>
+          <div class="tasks__body">
+            <label class="tasks__label">
+              First Number
+              <input type="number" class="tasks__number" id="first-num">
+            </label>
+            <label class="tasks__label">
+              Second Number
+              <input type="number" class="tasks__number" id="second-num">
+            </label>
+            <div class="tasks__actions">
+              <button class="tasks__button-action" onclick="calculate('sum')">Додати</button>
+              <button class="tasks__button-action" onclick="calculate('minus')">Відняти</button>
+              <button class="tasks__button-action" onclick="calculate('multi')">Помножити</button>
+              <button class="tasks__button-action" onclick="calculate('divis')">Поділити</button>
+            </div>
+            <div class="tasks__result">Result: <span id="task1Result"></span></div>
+          </div>
+        </div>
+        <div class="tasks__block">
+          <h3 class="tasks__title">Task #2</h3>
+          <div class="tasks__body">
+            <label class="tasks__label">
+              Сума в гривнях
+              <input type="number" class="tasks__number" id="sumInGrn">
+            </label>
+            <button class="tasks__button-action" onclick="convertMoney()">Конвертувати</button>
+            <label class="tasks__label">
+              Сума в доларах
+              <span class="tasks__number" id="sumInDolar">####</span>
+            </label>
+            <label class="tasks__label">
+              Сума в євро
+              <span class="tasks__number" id="sumInEuro">####</span>
+            </label>
+          </div>
+        </div>
+        <div class="tasks__block">
+          <h3 class="tasks__title">Task #3</h3>
+          <div class="tasks__body">
+            <label class="tasks__label">
+              Ваш рік народження:
+              <input type="number" class="tasks__number" id="yearBirth">
+            </label>
+            <button class="tasks__button-action" onclick="findYear()">Знайти роки</button>
+            <div class="tasks__result">Result: <span id="yearResult"></span></div>
+          </div>
+        </div>
+        <div class="tasks__block">
+          <h3 class="tasks__title">Task #4</h3>
+          <div class="tasks__body">
+            <div class="tasks__list">
+            </div>
+          </div>
+        </div>
+        <div class="tasks__block">
+          <h3 class="tasks__title">Task #5</h3>
+          <div class="tasks__body">
+            <div id="newTable" class="tasks__table">
+
+            </div>
+          </div>
+        </div>
+        <div class="tasks__block">
+          <h3 class="tasks__title">Task #6</h3>
+
+          <div class="tasks__body">
+            <label class="tasks__label">
+              Кількість оцінок:
+              <input id="scoresNum" type="number" class="tasks__number">
+            </label>
+            <button class="tasks__button-action" onclick="getTable()">Отримати оцінки</button>
+
+
+            <div id="scoresTable" class="tasks__table">
+
+            </div>
+
+            <button class="tasks__button-action" onclick="getTableAverage()">Знайти середній бал</button>
+
+            <div class="tasks__result">Result: <span id="task6Result"></span></div>
+          </div>
+        </div>
+        <div class="tasks__block">
+          <h3 class="tasks__title">Task #7</h3>
+          <div class="tasks__body">
+            <fieldset class="tasks__area">
+              <legend>Вид транспорту </legend>
+              <select name="transport" id="transport" class="tasks__select">
+                <option value="100">Авто</option>
+                <option value="500">Автобус</option>
+                <option value="1000">Літак</option>
+              </select>
+            </fieldset>
+            <fieldset class="tasks__area">
+              <legend>Харчування</legend>
+              <label class="tasks__label">
+                Сніданок
+                <input value="160" type="checkbox" class="tasks__number eat">
+              </label>
+              <label class="tasks__label">
+                Обід
+                <input value="100" type="checkbox" class="tasks__number eat">
+              </label>
+              <label class="tasks__label">
+                Вечеря
+                <input value="190" type="checkbox" class="tasks__number eat">
+              </label>
+            </fieldset>
+            <fieldset class="tasks__area">
+              <legend>Харчування</legend>
+              <label class="tasks__label">
+                Гід 1
+                <input type="radio" name="guid" value="1000" class="tasks__number guid">
+              </label>
+              <label class="tasks__label">
+                Гід 2
+                <input type="radio" name="guid" value="2000" class="tasks__number guid">
+              </label>
+              <label class="tasks__label">
+                Гід 3
+                <input type="radio" name="guid" value="3000" class="tasks__number guid">
+              </label>
+            </fieldset>
+
+            <button class="tasks__button-action" onclick="getTravelSum()">Знайти загальну суму</button>
+
+            <div class="tasks__result">Result: <span id="task7Result"></span></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
