@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<!-- zxx -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Home Page</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <main class="page">
+      <img src="img/background.jpg" alt="image" class="page__background">
+      <h2 class="page__title">Home Work 19</h2>
+      <div class="page__tasks tasks">
+        <div class="tasks__block">
+          <h3 class="tasks__title">Task #1</h3>
+          <div class="tasks__body">
+            <div class="tasks__collection collection">
+              <div class="collection__item">Hello!</div>
+              <div class="collection__item">Hello!</div>
+              <div class="collection__item">Hello!</div>
+              <div class="collection__item">Hello!</div>
+              <div class="collection__item">Hello!</div>
+              <div class="collection__item">Hello!</div>
+              <div class="collection__item">Hello!</div>
+              <div class="collection__item">Hello!</div>
+              <div class="collection__item">Hello!</div>
+              <div class="collection__item">Hello!</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page__tasks tasks">
+        <div class="tasks__block">
+          <h3 class="tasks__title">Task #2</h3>
+          <div id="input-wrapper" class="tasks__body">
+            <label class="tasks__label"> Value 1
+              <input type="number" class="tasks__input task-input">
+            </label>
+            <label class="tasks__label"> Value 2
+              <input type="number" class="tasks__input task-input">
+            </label>
+            <label class="tasks__label"> Value 3
+              <input type="number" class="tasks__input task-input">
+            </label>
+            <label class="tasks__label"> Value 4
+              <input type="number" class="tasks__input task-input">
+            </label>
+            <label class="tasks__label"> Value 5
+              <input type="number" class="tasks__input task-input">
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="page__tasks tasks">
+        <div class="tasks__block">
+          <h3 class="tasks__title">Task #3</h3>
+          <div class="tasks__body">
+            <div id="list-area" class="tasks__list-area list-area">
+              <!-- <ul class="list-area__list">
+                <li class="list-area__item"></li>
+              </ul> -->
+            </div>
+            <button id="checkList" class="tasks__button-action">Check</button>
+          </div>
+        </div>
+      </div>
+      <div class="page__tasks tasks">
+        <div class="tasks__block">
+          <h3 class="tasks__title">Task #4</h3>
+          <div class="tasks__body">
+            <h4 class="tasks__counter">Кількість кліків: <span id="clickCount"></span></h4>
+            <div id="tables-wrapper" class="tasks__tables tables">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page__tasks tasks">
+        <div class="tasks__block">
+          <h3 class="tasks__title">Task #5</h3>
+          <div class="tasks__body">
+            <div class="tasks__prod prod">
+              <div class="prod__block">
+                <img src="img/prod.jpg" alt="Image">
+              </div>
+              <div class="prod__block">
+                <img src="img/prod.jpg" alt="Image">
+              </div>
+              <div class="prod__block">
+                <img src="img/prod.jpg" alt="Image">
+              </div>
+              <div class="prod__block">
+                <img src="img/prod.jpg" alt="Image">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page__tasks tasks">
+        <div class="tasks__block">
+          <h3 class="tasks__title">Task #6</h3>
+          <div class="tasks__body">
+            <div class="tasks__sportsman sportsman">
+              <fieldset id="allSportmans" class="sportsman__block">
+                <legend>Загальний список</legend>
+                <div class="sportsman__item">
+                  З. Ібрагімович
+                  <button class="sportsman__button"><img src="img/arrow.png" alt="arrow"
+                      class="sportsman__icon"></button>
+                </div>
+                <div class="sportsman__item">
+                  М. Мудрик
+                  <button class="sportsman__button"><img src="img/arrow.png" alt="arrow"
+                      class="sportsman__icon"></button>
+                </div>
+                <div class="sportsman__item">
+                  Неймар
+                  <button class="sportsman__button"><img src="img/arrow.png" alt="arrow"
+                      class="sportsman__icon"></button>
+                </div>
+              </fieldset>
+              <fieldset id="chosenList" class="sportsman__block">
+                <legend>Список вибраних</legend>
+                <div class="sportsman__item chosen">
+                  К. Роналду
+                  <button class="sportsman__button"><img src="img/arrow.png" alt="arrow"
+                      class="sportsman__icon"></button>
+                </div>
+                <div class="sportsman__item chosen">
+                  Л. Мессі
+                  <button class="sportsman__button"><img src="img/arrow.png" alt="arrow"
+                      class="sportsman__icon"></button>
+                </div>
+                <div class="sportsman__item chosen">
+                  В. Жуніор
+                  <button class="sportsman__button"><img src="img/arrow.png" alt="arrow"
+                      class="sportsman__icon"></button>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page__tasks tasks">
+        <div class="tasks__block">
+          <h3 class="tasks__title">Task #7.1 (Сніжинка)</h3>
+          <div class="tasks__body">
+            <div class="tasks__fall fall">
+              <img src="img/snow.svg" alt="snow" id="fallElem" class="fall__elem"></img>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page__tasks tasks">
+        <div class="tasks__block">
+          <a target="_blank" href="catch.html" class="tasks__title">Task #7.2 (Посилання. Ловля тараканів)</a>
+          <div class="tasks__body">
+
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
