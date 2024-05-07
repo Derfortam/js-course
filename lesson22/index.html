@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<!-- zxx -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Home Page</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <main class="page">
+      <img src="img/back.jpg" alt="image" class="page__background">
+      <h2 class="page__title">Home Work 22</h2>
+      <div class="page__tasks tasks">
+
+        <div class="tasks__block">
+          <h3 class="tasks__title">Task #1</h3>
+          <div class="tasks__body">
+            <h3 class="tasks__name">Виводити на екран скільки хвилин користувач вже на сайті</h3>
+            <button id="getTimeOnSite" class="tasks__button">Дізнатись</button>
+            <div id="timeOnSite"></div>
+            <div id="timeOnSiteSecond"></div>
+          </div>
+        </div>
+        <div class="tasks__block">
+          <h3 class="tasks__title">Task #2</h3>
+          <div class="tasks__body">
+            <h3 class="tasks__name"> Задача 2. Вводимо час початку процедури (процедура триває 30хв). Визначити, чи
+              процедура ще триває.</h3>
+            <h4 class="tasks__sub-title">Час початку процедури</h4>
+            <label class="tasks__label">
+              Години:
+              <input id="userHours" type="number" class="tasks__input">
+            </label>
+            <label class="tasks__label">
+              Хвилини:
+              <input id="userMinutes" type="number" class="tasks__input">
+            </label>
+            <button id="isProcedureContinue" class="tasks__button">Дізнатись</button>
+            <div class="tasks__answer" id="isProcedureContinueResult"></div>
+          </div>
+        </div>
+        <div class="tasks__block">
+          <h3 class="tasks__title">Task #7</h3>
+          <div class="tasks__body">
+            <h3 class="tasks__name"> Дано список студентів
+              (ім’я і дата народження: у формі тексту (день.місяць.рік).
+              Знайти найстаршого студента</h3>
+            <h4 class="tasks__sub-title">Список студентів</h4>
+            <ul class="tasks__list">
+            </ul>
+            <button id="whoIsOlder" class="tasks__button">Дізнатись</button>
+            <div class="tasks__answer" id="olderOutput"></div>
+          </div>
+        </div>
+
+        <div class="tasks__block">
+          <h3 class="tasks__title">Task #9</h3>
+          <div class="tasks__body">
+            <h3 class="tasks__name">Користувачка планувала оформила дектретну відпустку на 200 днів
+              (дата початку відпустки вводиться). Визначити чи відпустка вже триває і чи не закінчилась.</h3>
+            <h4 class="tasks__sub-title">Дата початку відпустки</h4>
+            <label class="tasks__label">
+              Рік:
+              <input id="holidayYear" type="number" class="tasks__input">
+            </label>
+            <label class="tasks__label">
+              Міcяць:
+              <input id="holidayMonth" type="number" class="tasks__input">
+            </label>
+            <label class="tasks__label">
+              День:
+              <input id="holidayDay" type="number" class="tasks__input">
+            </label>
+            <label class="tasks__label">
+              Кількість днів відпустки:
+              <input id="holidayDayCount" type="number" class="tasks__input">
+            </label>
+            <button id="getHolidayTime" class="tasks__button">Дізнатись</button>
+            <div class="tasks__answer" id="isHolidayEnd"></div>
+          </div>
+        </div>
+        <div class="tasks__block">
+          <h3 class="tasks__title">Task #10</h3>
+          <div class="tasks__body">
+            <h3 class="tasks__name">Дано дата виробництва йогурта (вводимо рік, місяць, день)
+              та кількість днів придатності. Визначити чи є він придатним на даний момент.</h3>
+            <h4 class="tasks__sub-title">Дата виготовлення йогурту</h4>
+            <label class="tasks__label">
+              Рік:
+              <input id="productYear" type="number" class="tasks__input">
+            </label>
+            <label class="tasks__label">
+              Міcяць:
+              <input id="productMonth" type="number" class="tasks__input">
+            </label>
+            <label class="tasks__label">
+              День:
+              <input id="productDay" type="number" class="tasks__input">
+            </label>
+            <label class="tasks__label">
+              Кількість днів придатності:
+              <input id="productDayFit" type="number" class="tasks__input">
+            </label>
+            <button id="getProductTime" class="tasks__button">Дізнатись</button>
+            <div class="tasks__answer" id="isFit"></div>
+          </div>
+        </div>
+        <div class="tasks__block">
+          <h3 class="tasks__title">Task #12</h3>
+          <div class="tasks__body">
+            <h3 class="tasks__name">Сформувати масив з 1000 елементів від 1 до 800. Порівняти час сортування бульбашкою
+              і вставкою.</h3>
+            <h4 class="tasks__sub-title">Масив:</h4>
+            <div class="tasks__arr"></div>
+            <div class="tasks__answer" id="bubleMethod"></div>
+            <div class="tasks__answer" id="insertionMethod"></div>
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
