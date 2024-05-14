@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<!-- zxx -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Home Page</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <main class="page">
+      <img src="img/back.jpg" alt="image" class="page__background">
+      <h2 class="page__title">Home Work 23</h2>
+      <div class="page__tasks tasks">
+
+        <!-- <div class="tasks__block">
+          <h3 class="tasks__title">Task #1</h3>
+          <div class="tasks__body">
+            <h3 class="tasks__name">Виводити на екран скільки хвилин користувач вже на сайті</h3>
+            <button id="getTimeOnSite" class="tasks__button">Дізнатись</button>
+            <div id="timeOnSite"></div>
+            <div id="timeOnSiteSecond"></div>
+          </div>
+        </div> -->
+
+        <div class="tasks__block">
+          <h3 class="tasks__title">Task #14</h3>
+          <div class="tasks__body">
+            <h3 class="tasks__name"> Дано номер телефону. Перевірити, чи є цей телефон телефоном з України (починаєтсья
+              на «+38»)</h3>
+            <label class="tasks__label">
+              Введіть номер:
+              <input id="userNumber" type="text" class="tasks__input">
+            </label>
+
+            <button id="userNumberButton" class="tasks__button">Дізнатись</button>
+            <div class="tasks__answer" id="isThatUkraineNumber"></div>
+          </div>
+        </div>
+
+        <div class="tasks__block">
+          <h3 class="tasks__title">Task #15</h3>
+          <div class="tasks__body">
+            <h3 class="tasks__name">Користувач вводить прізвище та ім’я в одному рядку через пробіл. Замінити пробіл на
+              дефіс.</h3>
+            <label class="tasks__label">
+              Ваше прізвище та ім'я:
+              <input id="userNameAndLastName" type="text" class="tasks__input">
+            </label>
+            <button id="showUserNameAndLastName" class="tasks__button">Результат</button>
+            <div class="tasks__answer" id="newUserNameAndLastName"></div>
+          </div>
+        </div>
+        <div class="tasks__block">
+          <h3 class="tasks__title">Task #16</h3>
+          <div class="tasks__body">
+            <h3 class="tasks__name">Користувач вводить дату у форматі «день.місяць.рік». Отримати рядкове представлення
+              дати у форматі «день/місяць/рік»</h3>
+            <label class="tasks__label">
+              Рік:
+              <input id="userStrYear" type="number" class="tasks__input">
+            </label>
+            <label class="tasks__label">
+              Міcяць:
+              <input id="userStrMonth" type="number" class="tasks__input">
+            </label>
+            <label class="tasks__label">
+              День:
+              <input id="userStrDay" type="number" class="tasks__input">
+            </label>
+            <button id="getStrTime" class="tasks__button">Результат</button>
+            <div class="tasks__answer" id="strTime"></div>
+          </div>
+        </div>
+        <div class="tasks__block">
+          <h3 class="tasks__title">Task #17</h3>
+          <div class="tasks__body">
+            <h3 class="tasks__name">Користувач вводить день (номер дня (0-6) або «sun,mon,tue,wed,thu,fri,sat»).
+              Визначити, чи є це день вихідним</h3>
+            <label class="tasks__label">
+              День:
+              <input id="dayName" type="text" class="tasks__input">
+            </label>
+            <button id="getDayName" class="tasks__button">Дізнатись</button>
+            <div class="tasks__answer" id="isWeekend"></div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
